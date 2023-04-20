@@ -10,6 +10,7 @@ public void creaStanze() {
 	/* crea gli attrezzi */
 	Attrezzo lanterna = new Attrezzo("lanterna",3);
 	Attrezzo osso = new Attrezzo("osso",1);
+	Attrezzo zaino = new Attrezzo("zaino",4);
 	
 	/* crea stanze del labirinto */
 	Stanza atrio = new Stanza("Atrio");
@@ -34,6 +35,7 @@ public void creaStanze() {
 
     /* pone gli attrezzi nelle stanze */
 	aulaN10.addAttrezzo(lanterna);
+	aulaN11.addAttrezzo(zaino);
 	atrio.addAttrezzo(osso);
 
 	// il gioco comincia nell'atrio

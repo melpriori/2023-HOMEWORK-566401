@@ -80,5 +80,14 @@ public class Borsa {
 			s.append("Borsa vuota");
 		return s.toString();
 	}
+	
+	public int getNumeroAttrezzi() {
+		return numeroAttrezzi;
+	}
+	
+	public void setNumeroAttrezzi(int numeroAttrezzi) {
+		this.numeroAttrezzi = numeroAttrezzi;
+	}
+
 
 }
