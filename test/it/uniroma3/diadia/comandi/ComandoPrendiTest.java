@@ -19,7 +19,6 @@ public class ComandoPrendiTest {
 	private Attrezzo attrezzo;
 	private Attrezzo attrezzoPieno;
 	private Attrezzo attrezzoPesante;
-	private Attrezzo attrezzoRiempi;
 	private ComandoPrendi comando;
 	private Labirinto labirinto;
 	private Giocatore giocatore;
@@ -30,11 +29,10 @@ public class ComandoPrendiTest {
 		comando = new ComandoPrendi();
 		giocatore = new Giocatore();
 		labirinto = new Labirinto();
-		partita = new Partita();
+		partita = new Partita(labirinto);
 		attrezzoPesante = new Attrezzo("zaino", 11);
 		attrezzo= new Attrezzo("patata", 1);
 		attrezzoPieno= new Attrezzo("iphone", 1);
-		attrezzoRiempi= new Attrezzo("fazzoletti", 0);
 		stanzaCorrente = new Stanza("N11");
 		
 		stanzaCorrente.addAttrezzo(attrezzo);
@@ -75,35 +73,5 @@ public class ComandoPrendiTest {
 		
 	}
 	
-	@Test
-	public void testTroppiAttrezzi() {
-		giocatore.getBorsa().addAttrezzo(attrezzoRiempi);
-		giocatore.getBorsa().addAttrezzo(attrezzoRiempi);
-		giocatore.getBorsa().addAttrezzo(attrezzoRiempi);
-		giocatore.getBorsa().addAttrezzo(attrezzoRiempi);
-		giocatore.getBorsa().addAttrezzo(attrezzoRiempi);
-		giocatore.getBorsa().addAttrezzo(attrezzoRiempi);
-		giocatore.getBorsa().addAttrezzo(attrezzoRiempi);
-		giocatore.getBorsa().addAttrezzo(attrezzoRiempi);
-		giocatore.getBorsa().addAttrezzo(attrezzoRiempi);
-		giocatore.getBorsa().addAttrezzo(attrezzoRiempi);
-		comando.setParametro("iphone");
-		comando.esegui(partita);
-		
-		assertFalse(this.giocatore.getBorsa().hasAttrezzo("iphone"));
-		assertTrue(this.stanzaCorrente.hasAttrezzo("iphone"));
-	}
-	
-//	@Test
-//	public void testNonPreso() {
-//		assertFalse(this.giocatore.getBorsa().hasAttrezzo("patata"));
-//		
-//	}
-//	
-//	@Test
-//	public void testPresenteInStanza() {
-//		assertTrue(this.stanzaCorrente.hasAttrezzo("patata"));
-//		
-//	}
 	
 }

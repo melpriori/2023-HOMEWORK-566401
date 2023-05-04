@@ -5,6 +5,8 @@ public class Labirinto {
 private Stanza stanzaCorrente;
 private Stanza stanzaVincente;
 
+
+
 public void creaStanze() {
 
 	/* crea gli attrezzi */
@@ -52,4 +54,8 @@ public void setStanzaCorrente(Stanza stanzaCorrente) {
 public Stanza getStanzaVincente() {
 	return stanzaVincente;
 }
+public void setStanzaVincente(Stanza stanzaVincente) {
+	this.stanzaVincente = stanzaVincente;
+}
+
 }

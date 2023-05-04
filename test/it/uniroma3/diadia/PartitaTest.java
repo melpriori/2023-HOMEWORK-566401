@@ -3,18 +3,33 @@ package it.uniroma3.diadia;
 import static org.junit.Assert.*;
 
 
+
 import org.junit.Before;
 import org.junit.Test;
+
+import it.uniroma3.diadia.ambienti.Labirinto;
+import it.uniroma3.diadia.ambienti.LabirintoBuilder;
+
 
 /**
  * Test della classe Partita
  */
 public class PartitaTest {
 	private Partita partita;
+	private Labirinto labirinto;
+
+	
 	
 	@Before
 	public void setUp() throws Exception {
-		this.partita = new Partita();
+		labirinto = new LabirintoBuilder()
+				.addStanzaIniziale("LabCampusOne") 
+				.addAttrezzo("martello", 3)
+				.addStanzaVincente("Biblioteca") 
+				.addAdiacenza("LabCampusOne","Biblioteca","nord") 
+				.getLabirinto();
+		partita = new Partita(labirinto);
+		
 	}
 	
 	/**

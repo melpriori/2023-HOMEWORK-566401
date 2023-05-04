@@ -27,7 +27,7 @@ public class ComandoPosaTest {
 		comando = new ComandoPosa();
 		giocatore = new Giocatore();
 		labirinto = new Labirinto();
-		partita = new Partita();
+		partita = new Partita(labirinto);
 		borsa = new Borsa();
 		attrezzo = new Attrezzo("patata", 1);
 		stanzaCorrente = new Stanza("N11");

@@ -20,10 +20,16 @@ public class Partita {
 	private Giocatore giocatore;
 	private boolean finita;
 
+	
 	public Partita(){
-		labirinto = new Labirinto();
+		this.labirinto=new Labirinto();
 		giocatore = new Giocatore();
-		labirinto.creaStanze();
+		this.finita = false;
+	} 
+	
+	public Partita(Labirinto lab){
+		this.labirinto=lab;
+		giocatore = new Giocatore();
 		this.finita = false;
 	}
 
