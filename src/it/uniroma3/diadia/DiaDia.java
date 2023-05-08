@@ -72,7 +72,7 @@ public class DiaDia {
 		Labirinto labirinto = new LabirintoBuilder()
 				.addStanzaIniziale("LabCampusOne") 
 				.addStanzaVincente("Biblioteca") 
-				.addAdiacenza("LabCampusOne","Biblioteca","ovest") 
+				.addAdiacenza("LabCampusOne","Biblioteca","nord") 
 				.getLabirinto();
 		DiaDia gioco = new DiaDia(io, labirinto);
 		gioco.gioca();

@@ -15,10 +15,10 @@ import it.uniroma3.diadia.attrezzi.Attrezzo;
 
 public class Stanza { 
 
-	static final private int NUMERO_MASSIMO_ATTREZZI = 10;
+	protected static final int NUMERO_MASSIMO_ATTREZZI = 10;
 
 	private String nome;
-	private HashMap<String,Attrezzo> attrezzi;
+	protected HashMap<String,Attrezzo> attrezzi;
 	protected HashMap<String,Stanza>stanzeAdiacenti;
 	private int numeroStanzeAdiacenti;
 	private String[] direzioni;

@@ -59,8 +59,8 @@ public class LabirintoBuilder {
 		return this;
 	}
 	
-	public LabirintoBuilder addStanzaMagica(String nome, int i) {
-		Stanza stanza = new StanzaMagica(nome);
+	public LabirintoBuilder addStanzaMagica(String nome, int sogliaMagica) {
+		Stanza stanza = new StanzaMagica(nome, sogliaMagica);
 		this.UltimaStanzaAggiuntaEAggiorna(stanza);
 		return this;
 	}

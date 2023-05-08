@@ -1,5 +1,6 @@
 package it.uniroma3.diadia.comandi;
 import it.uniroma3.diadia.IO;
+import static it.uniroma3.diadia.giocatore.Borsa.DEFAULT_PESO_MAX_BORSA;
 import it.uniroma3.diadia.IOConsole;
 import it.uniroma3.diadia.Partita;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
@@ -15,8 +16,7 @@ public class ComandoPrendi implements Comando {
 		if(nomeAttrezzo!=null) {
 			if((partita.getLabirinto().getStanzaCorrente().hasAttrezzo(nomeAttrezzo) == true)
 					&&(partita.getGiocatore().getBorsa().getPeso() + 
-							partita.getLabirinto().getStanzaCorrente().getAttrezzo(nomeAttrezzo).getPeso()<10)
-					&&(partita.getGiocatore().getBorsa().getNumeroAttrezzi()<10)){
+							partita.getLabirinto().getStanzaCorrente().getAttrezzo(nomeAttrezzo).getPeso()<DEFAULT_PESO_MAX_BORSA)){
 				Attrezzo a = partita.getLabirinto().getStanzaCorrente().getAttrezzo(nomeAttrezzo);
 				partita.getLabirinto().getStanzaCorrente().removeAttrezzo(a);
 				
