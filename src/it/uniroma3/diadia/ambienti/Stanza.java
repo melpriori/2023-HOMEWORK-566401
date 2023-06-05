@@ -2,6 +2,7 @@ package it.uniroma3.diadia.ambienti;
 import java.util.HashMap;
 
 import it.uniroma3.diadia.attrezzi.Attrezzo;
+import it.uniroma3.diadia.personaggi.AbstractPersonaggio;
 
 /**
  * Classe Stanza - una stanza in un gioco di ruolo.
@@ -22,6 +23,7 @@ public class Stanza {
 	protected HashMap<String,Stanza>stanzeAdiacenti;
 	private int numeroStanzeAdiacenti;
 	private String[] direzioni;
+	private AbstractPersonaggio personaggio;
 
 	public int getNumeroStanzeAdiacenti() {
 		return numeroStanzeAdiacenti;
@@ -164,6 +166,24 @@ public class Stanza {
 	public String getDirezione(int i) {
 		return this.direzioni[i];
 	}
+
+	public AbstractPersonaggio getPersonaggio() {
+		return personaggio;
+	}
+
+	public void setPersonaggio(AbstractPersonaggio personaggio) {
+		this.personaggio = personaggio;
+	}
+
+	public HashMap<String, Stanza> getStanzeAdiacenti() {
+		return stanzeAdiacenti;
+	}
+
+	public void setStanzeAdiacenti(HashMap<String, Stanza> stanzeAdiacenti) {
+		this.stanzeAdiacenti = stanzeAdiacenti;
+	}
+	
+	
 	
 
 }
